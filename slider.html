@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sliders</title>
+
+    <script src="./sliders.js"></script>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        }
+
+        .slider{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        }
+
+        .slides{
+          width: 500vw;
+          display: flex;
+         transition: 0.5s ease-in-out;
+        }
+
+        .slide{
+          height: 100vh;
+          width: 100vw;
+          overflow: hidden;
+        }
+        .slide>img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      .btns{
+        position:absolute;
+        left:50%;
+        bottom: 5%;
+        z-index: 1;
+        transform: translate(-50%);
+        display: flex;
+        gap:2rem;
+        align-items: center;
+      }
+
+      button{
+        border: none;
+        color: white;
+        background-color: black;
+        opacity: 0.75;
+        font-size: 5rem;
+        padding: .5rem 1.5rem;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 2555, 0.258);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="./image/Pics01 (1).jpg" alt="Image 1" />
+        </div>
+        <div class="slide">
+          <img src="./image/Pics01 (2).jpg" alt="Image 2" />
+        </div>
+        <div class="slide">
+          <img src="./image/Pics01 (3).jpg" alt="Image 3" />
+        </div>
+        <div class="slide">
+          <img src="./image/Pics01 (4).jpg" alt="Image 4" />
+        </div>
+       </div>
+        <div class="btns">
+          <button class="prev">&larr;</button>
+          <button class="next">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
